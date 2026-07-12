@@ -1,2 +1,10 @@
 plan.md
 node_modules
+
+# build output
+dist
+
+# test artifacts
+test-results
+playwright-report
+coverage

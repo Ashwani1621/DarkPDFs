@@ -37,6 +37,17 @@ Open the printed URL (default `http://localhost:5173`), choose a PDF, and read.
 - **Persistence** — theme, zoom, filters, and the panel's open/closed state are remembered
   across reloads; the last page you read is remembered per document.
 
+## Deploy with Docker
+
+```bash
+docker build -t darkpdfs .
+docker run -d -p 8080:80 darkpdfs
+```
+
+Open `http://localhost:8080`. The image is a multi-stage build (Node builds the Vite bundle,
+nginx serves the ~96 MB final image): hashed assets are cached forever, `index.html` always
+revalidates, and the PDF.js `.mjs` worker gets the correct MIME type (`deploy/nginx.conf`).
+
 ## Run the tests
 
 ```bash

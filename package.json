@@ -6,6 +6,8 @@
   "scripts": {
     "test": "vitest run",
     "dev": "vite --host 0.0.0.0",
+    "build": "vite build",
+    "preview": "vite preview",
     "test:watch": "vitest",
     "test:e2e": "playwright test",
     "test:all": "npm run test && npm run test:e2e",

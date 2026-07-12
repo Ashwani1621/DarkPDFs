@@ -1,0 +1,14 @@
+node_modules
+dist
+.git
+test-results
+playwright-report
+coverage
+tests
+fixtures
+scripts
+docs
+plan.md
+README.md
+Dockerfile
+.dockerignore
